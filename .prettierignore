@@ -7,5 +7,14 @@
 !*.json
 !*.md
 
+.angular/
+dist/
+reports/
+
+.idea/
+.vscode/
+
+node_modules/
+
 */package.json
 package-lock.json
