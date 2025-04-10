@@ -20,6 +20,10 @@
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "outDir": "./dist/out-tsc",
+        "paths": {
+            "dma-ui": ["./dist/dma-ui"]
+        },
+        "skipDefaultLibCheck": true,
         "skipLibCheck": true,
         "strictBindCallApply": true,
         "strictBuiltinIteratorReturn": true,
