@@ -1,7 +1,7 @@
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { SideBarHarness } from '@dnd-mapp/authentication-server-ui/testing';
+import { SideBarHarness } from '@dnd-mapp/ui/testing';
 import { SideBarComponent } from './side-bar.component';
 
 describe('SideBarComponent', () => {

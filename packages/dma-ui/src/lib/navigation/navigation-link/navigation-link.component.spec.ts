@@ -2,7 +2,7 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { Router, Routes, provideRouter } from '@angular/router';
-import { NavigationLinkHarness } from '@dnd-mapp/authentication-server-ui/testing';
+import { NavigationLinkHarness } from '@dnd-mapp/ui/testing';
 import { NavigationLinkComponent } from './navigation-link.component';
 
 describe('NavigationLinkComponent', () => {

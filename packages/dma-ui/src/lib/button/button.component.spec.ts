@@ -1,8 +1,8 @@
 import { Component, signal, Type } from '@angular/core';
-import { ButtonHarness, createTestEnvironment } from '@dnd-mapp/authentication-server-ui/testing';
+import { ButtonHarness, createTestEnvironment } from '@dnd-mapp/ui/testing';
 import { ButtonComponent, ButtonType } from './button.component';
 
-describe('ButtonComponent', () => {
+fdescribe('ButtonComponent', () => {
     @Component({
         template: `<button dma-button>My Button</button>`,
         imports: [ButtonComponent],

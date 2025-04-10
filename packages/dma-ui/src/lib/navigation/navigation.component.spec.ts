@@ -1,12 +1,12 @@
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { NavigationHarness } from '@dnd-mapp/authentication-server-ui/testing';
+import { NavigationHarness } from '@dnd-mapp/ui/testing';
 import { NavigationComponent } from './navigation.component';
 
 describe('NavigationComponent', () => {
     @Component({
-        template: `<dma-navigation></dma-navigation>`,
+        template: `<dma-navigation />`,
         imports: [NavigationComponent],
     })
     class TestComponent {}

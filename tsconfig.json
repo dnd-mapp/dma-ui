@@ -21,7 +21,8 @@
         "noUnusedParameters": true,
         "outDir": "./dist/out-tsc",
         "paths": {
-            "dma-ui": ["./dist/dma-ui"]
+            "@dnd-mapp/ui": ["./dist/dma-ui"],
+            "@dnd-mapp/ui/testing": ["./packages/dma-ui/src/testing"]
         },
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,

@@ -1,7 +1,7 @@
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { TableHarness } from '@dnd-mapp/authentication-server-ui/testing';
+import { TableHarness } from '@dnd-mapp/ui/testing';
 import { TableModule } from './table.module';
 
 describe('TableComponent', () => {
