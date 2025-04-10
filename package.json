@@ -3,11 +3,11 @@
     "version": "0.0.0",
     "private": true,
     "scripts": {
-        "ng": "ng",
-        "build": "ng build",
-        "build-dev": "ng build -c dev",
-        "test": "ng test",
-        "test-dev": "ng test -c dev",
+        "build": "npx ng build",
+        "build-dev": "npx ng build -c dev",
+        "test": "npx ng test",
+        "test-dev": "npx ng test -c dev",
+        "lint": "npx ng lint",
         "format:check": "npx prettier -l **/*",
         "format:write": "npx prettier -w **/*"
     },
@@ -32,6 +32,9 @@
         "@angular/cli": "~19.2.0",
         "@angular/compiler-cli": "~19.2.0",
         "@types/jasmine": "~5.1.0",
+        "angular-eslint": "~19.3.0",
+        "eslint": "~9.24.0",
+        "eslint-plugin-ban": "~2.0.0",
         "jasmine-core": "~5.6.0",
         "karma": "~6.4.0",
         "karma-chrome-launcher": "~3.2.0",
@@ -41,6 +44,7 @@
         "ng-packagr": "~19.2.0",
         "prettier": "~3.5.0",
         "prettier-plugin-organize-imports": "~4.1.0",
-        "typescript": "~5.8.0"
+        "typescript": "~5.8.0",
+        "typescript-eslint": "~8.29.0"
     }
 }

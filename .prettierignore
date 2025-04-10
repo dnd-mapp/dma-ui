@@ -3,6 +3,7 @@
 !*/
 
 !*.ts
+!*.js
 !*.html
 !*.json
 !*.md
@@ -16,5 +17,4 @@ reports/
 
 node_modules/
 
-*/package.json
 package-lock.json

@@ -10,6 +10,7 @@
 
 # IDEs and editors
 .idea/*
+!.idea/jsLinters/eslint.xml
 !.idea/dma-ui.iml
 !.idea/modules.xml
 !.idea/vcs.xml
