@@ -1,0 +1,11 @@
+*
+
+!*/
+
+!*.ts
+!*.html
+!*.json
+!*.md
+
+*/package.json
+package-lock.json

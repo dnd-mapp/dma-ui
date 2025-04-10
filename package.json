@@ -7,9 +7,13 @@
         "build": "ng build",
         "build-dev": "ng build -c dev",
         "test": "ng test",
-        "test-dev": "ng test -c dev"
+        "test-dev": "ng test -c dev",
+        "format:check": "npx prettier -l **/*",
+        "format:write": "npx prettier -w **/*"
     },
-    "workspaces": ["./packages/*"],
+    "workspaces": [
+        "./packages/*"
+    ],
     "dependencies": {
         "@angular/common": "~19.2.0",
         "@angular/compiler": "~19.2.0",
@@ -34,6 +38,8 @@
         "karma-jasmine": "~5.1.0",
         "karma-jasmine-html-reporter": "~2.1.0",
         "ng-packagr": "~19.2.0",
+        "prettier": "~3.5.0",
+        "prettier-plugin-organize-imports": "~4.1.0",
         "typescript": "~5.8.0"
     }
 }
