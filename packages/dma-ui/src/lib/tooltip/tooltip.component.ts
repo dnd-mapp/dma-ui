@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
 import { debounce, timer } from 'rxjs';
-import { RXJS_CONFIG } from '../../../rxjs';
+import { RXJS_CONFIG } from '../rxjs';
 import { showHideAnimation, ShowHideAnimationState, ShowHideAnimationStates } from './animations';
 
 @Component({

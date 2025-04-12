@@ -3,7 +3,7 @@ import { Component, computed, signal, Type } from '@angular/core';
 import { createTestEnvironment, TooltipAnchorHarness } from '@dnd-mapp/ui/testing';
 import { ButtonComponent } from '../button';
 import { TooltipOrientation, TooltipPosition } from './models';
-import { TooltipModule } from './tooltip.module';
+import { TooltipDirective } from './tooltip.directive';
 
 describe('TooltipDirective', () => {
     @Component({
@@ -14,8 +14,7 @@ describe('TooltipDirective', () => {
                     dmaTooltip="My Tooltip label"
                     [tooltipPosition]="position()"
                     [tooltipOrientation]="orientation()"
-                    [disabled]="isDisabled()"
-                >
+                    [disabled]="isDisabled()">
                     My Button
                 </button>
             </div>
@@ -29,7 +28,7 @@ describe('TooltipDirective', () => {
                 width: 20em;
             }
         `,
-        imports: [ButtonComponent, TooltipModule],
+        imports: [ButtonComponent, TooltipDirective],
     })
     class TestComponent {
         public readonly orientation = signal<TooltipOrientation>(null);
@@ -41,7 +40,7 @@ describe('TooltipDirective', () => {
 
     @Component({
         template: `<button dma-button dmaTooltip="My Tooltip label" [disabled]="disabled()">My Button</button>`,
-        imports: [ButtonComponent, TooltipModule],
+        imports: [ButtonComponent, TooltipDirective],
     })
     class DisabledTestComponent {
         public readonly disabled = signal(true);
