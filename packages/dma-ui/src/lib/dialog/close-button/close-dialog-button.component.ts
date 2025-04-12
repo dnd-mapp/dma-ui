@@ -6,7 +6,6 @@ import { DialogRef } from '../dialog-ref';
 @Component({
     selector: 'dma-close-dialog-button',
     templateUrl: './close-dialog-button.component.html',
-    styleUrl: './close-dialog-button.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [ButtonComponent, IconsModule],
 })
