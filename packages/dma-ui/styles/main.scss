@@ -1,0 +1,28 @@
+@use './colors' as *;
+@use './functions' as *;
+
+a {
+    color: $blue15;
+    text-decoration: none;
+
+    &:hover {
+        color: hover($blue15);
+        text-decoration: underline;
+    }
+}
+
+.dma-tooltip-start {
+    margin-right: 0.5rem;
+}
+
+.dma-tooltip-end {
+    margin-left: 0.5rem;
+}
+
+.dma-tooltip-top {
+    margin-bottom: 0.5rem;
+}
+
+.dma-tooltip-bottom {
+    margin-top: 0.5rem;
+}
