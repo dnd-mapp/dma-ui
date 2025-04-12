@@ -72,3 +72,5 @@ export function autocompleteAttribute(value: unknown): AutocompleteType {
         Object.values(AutocompleteTypes).find((autocompleteType) => autocompleteType === value) ?? AutocompleteTypes.OFF
     );
 }
+
+export type ErrorMap = Record<string, (...args: unknown[]) => string>;

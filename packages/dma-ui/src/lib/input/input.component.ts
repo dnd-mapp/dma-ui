@@ -15,11 +15,11 @@ import {
     signal,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl, Validators } from '@angular/forms';
-import { ErrorMap } from '../../../user/overview/user-dialog/models';
 import { IconsModule } from '../icons';
 import {
     autocompleteAttribute,
     AutocompleteTypes,
+    ErrorMap,
     floatingLabelAnimation,
     FloatingLabelAnimationState,
     FloatingLabelAnimationStates,
