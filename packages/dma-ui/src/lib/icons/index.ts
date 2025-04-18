@@ -3,7 +3,6 @@ export * from './circle-exclamation/circle-exclamation.icon';
 export * from './circle/circle.icon';
 export * from './envelope/envelope.icon';
 export * from './house/house.icon';
-export * from './icons.module';
 export * from './lock/lock.icon';
 export * from './pen-to-square/pen-to-square.icon';
 export * from './plus/plus.icon';

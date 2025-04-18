@@ -15,7 +15,7 @@ import {
     signal,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, NgControl, Validators } from '@angular/forms';
-import { IconsModule } from '../icons';
+import { CircleExclamationIcon } from '../icons';
 import {
     autocompleteAttribute,
     AutocompleteTypes,
@@ -39,7 +39,7 @@ const provideControlValueAccessor = () => ({
     changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [provideControlValueAccessor()],
     animations: [floatingLabelAnimation],
-    imports: [IconsModule],
+    imports: [CircleExclamationIcon],
 })
 export class InputComponent implements ControlValueAccessor, OnInit {
     private readonly injector = inject(Injector);

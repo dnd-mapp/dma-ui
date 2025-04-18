@@ -10,7 +10,7 @@ import {
     signal,
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { IconsModule } from '../icons';
+import { CheckIcon } from '../icons';
 
 const provideControlValueAccessor: () => ExistingProvider = () => ({
     provide: NG_VALUE_ACCESSOR,
@@ -24,7 +24,7 @@ const provideControlValueAccessor: () => ExistingProvider = () => ({
     styleUrl: './checkbox.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     providers: [provideControlValueAccessor()],
-    imports: [IconsModule],
+    imports: [CheckIcon],
 })
 export class CheckboxComponent implements ControlValueAccessor {
     public readonly label = input.required<string>();
