@@ -5,6 +5,8 @@
     "scripts": {
         "build": "npx ng build",
         "build-dev": "npx ng build -c dev",
+        "storybook": "npx ng run dma-ui:storybook",
+        "build-storybook": "npx ng run dma-ui:build-storybook",
         "test": "npx ng test",
         "test-dev": "npx ng test -c dev",
         "lint": "npx ng lint",
@@ -15,6 +17,7 @@
         "./packages/*"
     ],
     "dependencies": {
+        "@angular/animations": "~19.2.0",
         "@angular/cdk": "~19.2.0",
         "@angular/common": "~19.2.0",
         "@angular/compiler": "~19.2.0",
@@ -31,10 +34,23 @@
         "@angular-devkit/build-angular": "~19.2.0",
         "@angular/cli": "~19.2.0",
         "@angular/compiler-cli": "~19.2.0",
+        "@storybook/addon-actions": "~8.6.0",
+        "@storybook/addon-backgrounds": "~8.6.0",
+        "@storybook/addon-controls": "~8.6.0",
+        "@storybook/addon-docs": "~8.6.0",
+        "@storybook/addon-interactions": "~8.6.0",
+        "@storybook/addon-measure": "~8.6.0",
+        "@storybook/addon-outline": "~8.6.0",
+        "@storybook/addon-storysource": "~8.6.0",
+        "@storybook/addon-toolbars": "~8.6.0",
+        "@storybook/addon-viewport": "~8.6.0",
+        "@storybook/angular": "~8.6.0",
+        "@storybook/blocks": "~8.6.0",
         "@types/jasmine": "~5.1.0",
         "angular-eslint": "~19.3.0",
         "eslint": "~9.24.0",
         "eslint-plugin-ban": "~2.0.0",
+        "eslint-plugin-storybook": "~0.12.0",
         "jasmine-core": "~5.6.0",
         "karma": "~6.4.0",
         "karma-chrome-launcher": "~3.2.0",
@@ -44,6 +60,7 @@
         "ng-packagr": "~19.2.0",
         "prettier": "~3.5.0",
         "prettier-plugin-organize-imports": "~4.1.0",
+        "storybook": "~8.6.0",
         "typescript": "~5.8.0",
         "typescript-eslint": "~8.29.0"
     }

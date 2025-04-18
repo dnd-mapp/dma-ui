@@ -34,6 +34,27 @@
                         }
                     }
                 },
+                "storybook": {
+                    "builder": "@storybook/angular:start-storybook",
+                    "options": {
+                        "browserTarget": "dma-ui:build",
+                        "compodoc": false,
+                        "configDir": "packages/dma-ui/.storybook",
+                        "open": false,
+                        "port": 6006,
+                        "styles": ["packages/dma-ui/.storybook/styles.scss"]
+                    }
+                },
+                "build-storybook": {
+                    "builder": "@storybook/angular:build-storybook",
+                    "options": {
+                        "browserTarget": "dma-ui:build",
+                        "compodoc": false,
+                        "configDir": "packages/dma-ui/.storybook",
+                        "outputDir": "storybook-static",
+                        "styles": ["packages/dma-ui/.storybook/styles.scss"]
+                    }
+                },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {

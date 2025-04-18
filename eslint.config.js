@@ -3,6 +3,7 @@ const eslint = require('@eslint/js');
 const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
 const pluginBan = require('eslint-plugin-ban');
+const storybookPlugin = require('eslint-plugin-storybook');
 
 module.exports = tseslint.config(
     {
@@ -15,6 +16,7 @@ module.exports = tseslint.config(
             ...tseslint.configs.recommended,
             ...tseslint.configs.stylistic,
             ...angular.configs.tsRecommended,
+            ...storybookPlugin.configs.recommended,
         ],
         processor: angular.processInlineTemplates,
         rules: {
