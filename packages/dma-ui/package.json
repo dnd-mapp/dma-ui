@@ -1,7 +1,13 @@
 {
     "name": "dma-ui",
     "version": "0.0.1",
+    "repository": "https://github.com/dnd-mapp/dma-ui",
     "sideEffects": false,
+    "exports": {
+        "./styles/*": {
+            "sass": "./styles/*"
+        }
+    },
     "peerDependencies": {
         "@angular/common": "~19.2.0",
         "@angular/core": "~19.2.0"
