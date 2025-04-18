@@ -1,27 +1,17 @@
 import {
-    AfterViewInit,
+    AfterContentInit,
     booleanAttribute,
     ChangeDetectionStrategy,
     Component,
+    computed,
     ElementRef,
     HostBinding,
-    Input,
+    input,
     signal,
-    ViewChild,
+    viewChild,
 } from '@angular/core';
-import { IconsModule } from '../icons';
-
-const ButtonTypes = {
-    PRIMARY: 'primary',
-    SECONDARY: 'secondary',
-    DANGER: 'danger',
-} as const;
-
-export type ButtonType = (typeof ButtonTypes)[keyof typeof ButtonTypes];
-
-function buttonTypeAttribute(value: string) {
-    return Object.values(ButtonTypes).find((buttonType) => buttonType === value) ?? 'secondary';
-}
+import { SpinnerIcon } from '../icons';
+import { buttonTypeAttribute, ButtonTypes } from './models';
 
 @Component({
     // eslint-disable-next-line @angular-eslint/component-selector
@@ -29,37 +19,41 @@ function buttonTypeAttribute(value: string) {
     templateUrl: './button.component.html',
     styleUrl: './button.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [IconsModule],
+    imports: [SpinnerIcon],
 })
-export class ButtonComponent implements AfterViewInit {
-    @Input({ alias: 'dma-button', transform: buttonTypeAttribute })
-    @HostBinding('attr.dma-button-type')
-    public buttonType: ButtonType = 'secondary';
+export class ButtonComponent implements AfterContentInit {
+    public readonly dmaButton = input(ButtonTypes.SECONDARY, {
+        alias: 'dma-button',
+        transform: buttonTypeAttribute,
+    });
 
-    @Input({ transform: booleanAttribute })
-    public set processing(processing: boolean) {
-        this.disabled = this._processing = processing;
-    }
+    public readonly processing = input(false, { transform: booleanAttribute });
 
-    public get processing() {
-        return this._processing;
-    }
+    public readonly disabled = input(false, { transform: booleanAttribute });
 
-    private _processing = false;
+    protected readonly contentWidth = signal<number>(null);
 
-    @Input({ transform: booleanAttribute })
-    public disabled = false;
+    private readonly _disabled = computed(() => (this.disabled() || this.processing() ? '' : undefined));
+
+    private readonly contentElement = viewChild<ElementRef<HTMLDivElement>>('content');
 
     @HostBinding('attr.disabled')
     protected get isDisabled() {
-        return this.disabled ? '' : undefined;
+        return this._disabled();
     }
 
-    @ViewChild('content') private readonly contentElement: ElementRef<HTMLDivElement>;
+    @HostBinding('attr.dma-button')
+    protected get buttonType() {
+        return this.dmaButton();
+    }
 
-    protected readonly contentWidth = signal<string>(null);
+    public ngAfterContentInit() {
+        const elementWidth = getComputedStyle(this.contentElement().nativeElement).width;
+        const widthInPixels = Number(elementWidth.replace('px', ''));
 
-    public ngAfterViewInit() {
-        this.contentWidth.set(getComputedStyle(this.contentElement.nativeElement).width);
+        // TODO: replace hardcoded font-size with theme variable
+        const widthInEm = widthInPixels / 16;
+
+        this.contentWidth.set(widthInEm);
     }
 }
