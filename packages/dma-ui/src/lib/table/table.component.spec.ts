@@ -1,8 +1,12 @@
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { TableHarness } from '@dnd-mapp/ui/testing';
-import { TableModule } from './table.module';
+import { TableHarness } from '../../../testing';
+import { TableBodyComponent } from './body';
+import { TableColumnComponent } from './column';
+import { TableHeaderComponent } from './header';
+import { TableRowComponent } from './row';
+import { TableComponent } from './table.component';
 
 describe('TableComponent', () => {
     @Component({
@@ -26,7 +30,7 @@ describe('TableComponent', () => {
                 </dma-table-body>
             </dma-table>
         `,
-        imports: [TableModule],
+        imports: [TableComponent, TableHeaderComponent, TableRowComponent, TableColumnComponent, TableBodyComponent],
     })
     class TestComponent {}
 

@@ -1,7 +1,7 @@
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { CheckboxHarness } from '@dnd-mapp/ui/testing';
+import { CheckboxHarness } from '../../../testing';
 import { CheckboxComponent } from './checkbox.component';
 
 describe('CheckboxComponent', () => {

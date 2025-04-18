@@ -2,12 +2,12 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
-import { InputHarness } from '@dnd-mapp/ui/testing';
+import { InputHarness } from '../../../testing';
 import { InputComponent } from './input.component';
 
 describe('InputComponent', () => {
     @Component({
-        template: ` <dma-input type="text" label="My label" />`,
+        template: `<dma-input type="text" label="My label" />`,
         imports: [InputComponent],
     })
     class TestComponent {}

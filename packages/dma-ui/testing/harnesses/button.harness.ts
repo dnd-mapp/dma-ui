@@ -1,5 +1,5 @@
 import { BaseHarnessFilters, ComponentHarness, HarnessPredicate } from '@angular/cdk/testing';
-import { ButtonType } from '@dnd-mapp/ui';
+import { ButtonType } from '../../src/lib';
 
 interface ButtonFilters extends BaseHarnessFilters {
     label?: string;
@@ -7,21 +7,21 @@ interface ButtonFilters extends BaseHarnessFilters {
 }
 
 export class ButtonHarness extends ComponentHarness {
-    public static hostSelector = 'button[dma-button-type]';
+    public static hostSelector = 'button[dma-button]';
 
     public static with = (options: ButtonFilters) =>
         new HarnessPredicate(ButtonHarness, options).addOption('button label', options.label, (harness, label) =>
             HarnessPredicate.stringMatches(harness.getLabel(), label)
         );
 
-    private readonly processingIconLocator = this.locatorForOptional('dma-icon[dma-spinner-icon]');
+    private readonly processingIconLocator = this.locatorFor('dma-icon[dma-spinner-icon]');
 
     public async click() {
         await (await this.host()).click();
     }
 
     public async getButtonType() {
-        return await (await this.host()).getAttribute('dma-button-type');
+        return await (await this.host()).getAttribute('dma-button');
     }
 
     public async getLabel() {
@@ -37,6 +37,6 @@ export class ButtonHarness extends ComponentHarness {
     }
 
     public async isProcessing() {
-        return Boolean(await this.processingIconLocator());
+        return (await (await this.processingIconLocator()).getCssValue('display')) === 'block';
     }
 }
