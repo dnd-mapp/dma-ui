@@ -14,7 +14,8 @@ describe('TooltipDirective', () => {
                     dmaTooltip="My Tooltip label"
                     [tooltipPosition]="position()"
                     [tooltipOrientation]="orientation()"
-                    [disabled]="isDisabled()">
+                    [disabled]="isDisabled()"
+                >
                     My Button
                 </button>
             </div>
