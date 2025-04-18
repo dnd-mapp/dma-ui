@@ -1,9 +1,7 @@
 import { ComponentHarness } from '@angular/cdk/testing';
-import {
-    DialogContentHarness,
-    DialogFooterHarness,
-    DialogHeaderHarness,
-} from '@dnd-mapp/authentication-server-ui/testing';
+import { DialogContentHarness } from './dialog-content.harness';
+import { DialogFooterHarness } from './dialog-footer.harness';
+import { DialogHeaderHarness } from './dialog-header.harness';
 
 export class DialogHarness extends ComponentHarness {
     public static readonly hostSelector = '.dma-dialog-container';

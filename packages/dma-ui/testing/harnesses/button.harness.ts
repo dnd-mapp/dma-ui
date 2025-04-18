@@ -1,5 +1,5 @@
 import { BaseHarnessFilters, ComponentHarness, HarnessPredicate } from '@angular/cdk/testing';
-import { ButtonType } from '../../../app/shared';
+import { ButtonType } from '@dnd-mapp/ui';
 
 interface ButtonFilters extends BaseHarnessFilters {
     label?: string;
