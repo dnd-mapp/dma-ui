@@ -1,6 +1,7 @@
 # @dnd-mapp/ui
 
 [![License](https://img.shields.io/github/license/dnd-mapp/dma-ui)](./LICENSE.md)
+[![Build](https://github.com/dnd-mapp/dma-ui/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/dnd-mapp/dma-ui/actions/workflows/build.yml)
 
 ## Overview
 
