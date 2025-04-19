@@ -2,7 +2,7 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
-import { InputHarness } from '../../../testing';
+import { InputHarness } from '@dnd-mapp/ui/testing';
 import { InputComponent } from './input.component';
 
 describe('InputComponent', () => {

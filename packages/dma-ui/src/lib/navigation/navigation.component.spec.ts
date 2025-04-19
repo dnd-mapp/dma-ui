@@ -1,7 +1,7 @@
 import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { NavigationHarness } from '../../../testing';
+import { NavigationHarness } from '@dnd-mapp/ui/testing';
 import { NavigationComponent } from './navigation.component';
 
 describe('NavigationComponent', () => {

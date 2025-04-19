@@ -1,6 +1,6 @@
 import { manualChangeDetection } from '@angular/cdk/testing';
 import { Component, computed, signal, Type } from '@angular/core';
-import { createTestEnvironment, TooltipAnchorHarness } from '../../../testing';
+import { createTestEnvironment, TooltipAnchorHarness } from '@dnd-mapp/ui/testing';
 import { ButtonComponent } from '../button';
 import { TooltipOrientation, TooltipPosition } from './models';
 import { TooltipDirective } from './tooltip.directive';

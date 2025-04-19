@@ -3,7 +3,7 @@ import { TestbedHarnessEnvironment } from '@angular/cdk/testing/testbed';
 import { Type } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideNoopAnimations } from '@angular/platform-browser/animations';
-import { provideRxjsTestingConfig } from '../providers';
+import { provideTestingTooltipDelays } from '../providers';
 
 interface CreateTestEnvironmentParams<T, H extends ComponentHarness> {
     testComponent?: Type<T>;
@@ -20,7 +20,7 @@ export async function createTestEnvironment<T, H extends ComponentHarness>(param
 
     TestBed.configureTestingModule({
         imports: [...(params.imports ?? []), ...(params.testComponent ? [params.testComponent] : [])],
-        providers: [provideNoopAnimations(), provideRxjsTestingConfig(), ...(params.providers ?? [])],
+        providers: [provideNoopAnimations(), provideTestingTooltipDelays(), ...(params.providers ?? [])],
     });
 
     if (params.initFunction) await params.initFunction();
