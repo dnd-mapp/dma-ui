@@ -1,4 +1,4 @@
-# Contributing to @dnd-mapp/ui
+# Contributing
 
 Thank you for considering contributing to **@dnd-mapp/ui**! We welcome contributions of all kinds, including bug reports, feature requests, code contributions, and documentation improvements. Please take a moment to review this guide to ensure a smooth contribution process.
 
