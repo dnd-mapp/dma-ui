@@ -1,0 +1,33 @@
+html,
+body {
+  background-color: var(--background, #1f1f1f);
+  color: var(--on-background, #f2f2f2);
+  font-family: var(--font-family, "Roboto", sans-serif);
+  font-size: var(--font-size, 100%);
+  font-weight: var(--fw-regular, 400);
+}
+
+a {
+  color: #74a3ff;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(122.95, 167.6, 255);
+  text-decoration: underline;
+}
+
+.dma-tooltip-start {
+  margin-right: 0.5rem;
+}
+
+.dma-tooltip-end {
+  margin-left: 0.5rem;
+}
+
+.dma-tooltip-top {
+  margin-bottom: 0.5rem;
+}
+
+.dma-tooltip-bottom {
+  margin-top: 0.5rem;
+}
