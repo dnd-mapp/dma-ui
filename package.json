@@ -16,6 +16,9 @@
     "workspaces": [
         "./packages/*"
     ],
+    "files": [
+        "dist/dma-ui"
+    ],
     "dependencies": {
         "@angular/animations": "~19.2.0",
         "@angular/cdk": "~19.2.0",
