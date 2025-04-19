@@ -40,7 +40,7 @@ jobs:
             - name: Create Pull request
               uses: peter-evans/create-pull-request@v7
               with:
-                  branch: release/$VERSION
+                  branch: release/${{ env.VERSION }}
                   title: release/$VERSION
                   body: Bumps the version to $VERSION
                   committer: GitHub Actions <actions@github.com>
