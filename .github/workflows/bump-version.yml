@@ -33,18 +33,19 @@ jobs:
                   VERSION=$(jq -r '.version' packages/dma-ui/package.json)
                   echo "VERSION=$VERSION" >> $GITHUB_ENV
             - name: Create branch
-              run: git checkout -b release/$VERSION
+              run: git checkout -b release/${{ env.VERSION }}
             - name: Commit changes
               run: |
                   git add .
-                  git commit -m "Bump version to $VERSION"
+                  git commit -m "Bump version to ${{ env.VERSION }}"
             - name: Push changes
-              run: git push origin release/$VERSION
+              run: git push origin release/${{ env.VERSION }}
             - name: Create Pull request
               uses: peter-evans/create-pull-request@v7
               with:
-                  base: release/${{ env.VERSION }}
-                  title: release/$VERSION
-                  body: Bumps the version to $VERSION
+                  base: main
+                  branch: release/${{ env.VERSION }}
+                  title: Release/${{ env.VERSION }}
+                  body: Bumps the version to ${{ env.VERSION }}
                   committer: GitHub Actions <actions@github.com>
                   author: GitHub Actions <actions@github.com>
