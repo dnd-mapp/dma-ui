@@ -1,18 +1,18 @@
-# @dnd-mapp/ui
+# @dnd-mapp/dma-ui
 
 [![License](https://img.shields.io/github/license/dnd-mapp/dma-ui)](./LICENSE.md)
 [![Build](https://github.com/dnd-mapp/dma-ui/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/dnd-mapp/dma-ui/actions/workflows/build.yml)
 
 ## Overview
 
-**@dnd-mapp/ui** contains the source code for the `@dnd-mapp/ui` library which contains shared components for the DnD-Mapp platform.
+**@dnd-mapp/dma-ui** contains the source code for the `@dnd-mapp/dma-ui` library which contains shared components for the DnD-Mapp platform.
 These components are themed and styled according to the house style of the DnD-Mapp platform.
 
 ---
 
 ## Getting started
 
-Follow these steps to get started developing **@dnd-mapp/ui**
+Follow these steps to get started developing **@dnd-mapp/dma-ui**
 
 ### Prerequisites
 

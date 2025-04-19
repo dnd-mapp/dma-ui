@@ -1,5 +1,5 @@
 import { booleanAttribute, ChangeDetectionStrategy, Component, Input, input } from '@angular/core';
-import { ButtonComponent, buttonTypeAttribute, ButtonTypes, PenToSquareIcon } from '@dnd-mapp/ui';
+import { ButtonComponent, buttonTypeAttribute, ButtonTypes, PenToSquareIcon } from '@dnd-mapp/dma-ui';
 import { fn } from '@storybook/test';
 
 @Component({

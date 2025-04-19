@@ -1,4 +1,4 @@
-import { ButtonTypes } from '@dnd-mapp/ui';
+import { ButtonTypes } from '@dnd-mapp/dma-ui';
 import { withActions } from '@storybook/addon-actions/decorator';
 import { Meta, StoryObj } from '@storybook/angular';
 import { ButtonStoryComponent } from './button-story.component';

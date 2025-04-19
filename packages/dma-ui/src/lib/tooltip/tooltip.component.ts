@@ -10,7 +10,7 @@ import {
     signal,
 } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
-import { TOOLTIP_DELAYS } from '@dnd-mapp/ui/utils';
+import { TOOLTIP_DELAYS } from '@dnd-mapp/dma-ui/utils';
 import { debounce, timer } from 'rxjs';
 import { showHideAnimation, ShowHideAnimationState, ShowHideAnimationStates } from './animations';
 
