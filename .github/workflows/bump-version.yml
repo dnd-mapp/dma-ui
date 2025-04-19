@@ -23,9 +23,7 @@ jobs:
             - name: Set up Node.js
               uses: ./.github/actions/setup-node
             - name: Configure Git
-              run: |
-                  git config user.name "GitHub Actions"
-                  git config user.email "actions@github.com"
+              uses: ./.github/actions/configure-git
             - name: Generate token
               id: generate-token
               uses: actions/create-github-app-token@v2
