@@ -1,0 +1,47 @@
+name: Bump version
+on:
+    workflow_dispatch:
+        inputs:
+            version:
+                required: true
+                description: What kind of release is this going to be?
+                type: choice
+                options:
+                    - major
+                    - minor
+                    - patch
+jobs:
+    bump-version:
+        name: Bump version
+        runs-on: ubuntu-22.04
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            - name: Set up Node.js
+              uses: ./.github/actions/setup-node
+            - name: Configure Git
+              run: |
+                  git config user.name "GitHub Actions"
+                  git config user.email "actions@github.com"
+            - name: Bump version
+              run: npm version ${{ inputs.version }} -w packages/dma-ui
+            - name: Extract version
+              run: |
+                  VERSION=$(jq -r '.version' packages/dma-ui/package.json)
+                  echo "VERSION=$VERSION" >> $GITHUB_ENV
+            - name: Create branch
+              run: git checkout -b release/$VERSION
+            - name: Commit changes
+              run: |
+                  git add .
+                  git commit -m "Bump version to $VERSION"
+            - name: Push changes
+              run: git push origin release/$VERSION
+            - name: Create Pull request
+              uses: peter-evans/create-pull-request@v7
+              with:
+                  branch: release/$VERSION
+                  title: release/$VERSION
+                  body: Bumps the version to $VERSION
+                  committer: GitHub Actions <actions@github.com>
+                  author: GitHub Actions <actions@github.com>
