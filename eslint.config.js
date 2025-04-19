@@ -16,7 +16,6 @@ module.exports = tseslint.config(
             ...tseslint.configs.recommended,
             ...tseslint.configs.stylistic,
             ...angular.configs.tsRecommended,
-            ...storybookPlugin.configs.recommended,
         ],
         processor: angular.processInlineTemplates,
         rules: {
@@ -36,12 +35,23 @@ module.exports = tseslint.config(
                     style: 'kebab-case',
                 },
             ],
+            '@angular-eslint/component-class-suffix': [
+                'error',
+                {
+                    suffixes: ['Component', 'Icon'],
+                },
+            ],
             'ban/ban': [
                 2,
                 { name: 'fdescribe', message: 'Focussing test suites is not allowed' },
                 { name: 'fit', message: 'Focussing a single unit test is not allowed' },
             ],
         },
+    },
+    {
+        files: ['**/*.stories.ts'],
+        extends: [...storybookPlugin.configs['flat/recommended']],
+        rules: {},
     },
     {
         files: ['**/*.html'],
