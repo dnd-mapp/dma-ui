@@ -10,8 +10,8 @@ import {
     signal,
 } from '@angular/core';
 import { takeUntilDestroyed, toObservable } from '@angular/core/rxjs-interop';
+import { TOOLTIP_DELAYS } from '@dnd-mapp/ui/utils';
 import { debounce, timer } from 'rxjs';
-import { RXJS_CONFIG } from '../rxjs';
 import { showHideAnimation, ShowHideAnimationState, ShowHideAnimationStates } from './animations';
 
 @Component({
@@ -26,7 +26,7 @@ import { showHideAnimation, ShowHideAnimationState, ShowHideAnimationStates } fr
 })
 export class TooltipComponent implements OnInit {
     private readonly destroyRef = inject(DestroyRef);
-    private readonly rxjsConfig = inject(RXJS_CONFIG);
+    private readonly tooltipDelays = inject(TOOLTIP_DELAYS, { optional: true });
 
     public label: string;
 
@@ -41,8 +41,8 @@ export class TooltipComponent implements OnInit {
 
     @Output() public animationDone = new EventEmitter<void>();
 
-    private readonly showDelay = this.rxjsConfig.delays.tooltip.show;
-    private readonly hideDelay = this.rxjsConfig.delays.tooltip.hide;
+    private readonly showDelay = this.tooltipDelays?.show ?? 500;
+    private readonly hideDelay = this.tooltipDelays?.hide ?? 200;
 
     constructor() {
         this.nextState$.subscribe({

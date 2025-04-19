@@ -21,7 +21,8 @@
         "noUnusedParameters": true,
         "outDir": "./dist/out-tsc",
         "paths": {
-            "@dnd-mapp/ui": ["./dist/dma-ui"]
+            "@dnd-mapp/ui": ["./dist/dma-ui"],
+            "@dnd-mapp/ui/*": ["./dist/dma-ui/*"]
         },
         "skipDefaultLibCheck": true,
         "skipLibCheck": true,
@@ -33,8 +34,12 @@
     },
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,
+        "fullTemplateTypeCheck": true,
+        "compilationMode": "partial",
         "strictInjectionParameters": true,
         "strictInputAccessModifiers": true,
+        "strictMetadataEmit": true,
+        "strictStandalone": true,
         "strictTemplates": true
     }
 }
