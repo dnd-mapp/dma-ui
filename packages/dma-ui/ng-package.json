@@ -1,8 +1,5 @@
 {
     "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
     "assets": ["./styles/**/**", "./README.md"],
-    "dest": "../../dist/dma-ui",
-    "lib": {
-        "entryFile": "src/public-api.ts"
-    }
+    "dest": "../../dist/dma-ui"
 }
