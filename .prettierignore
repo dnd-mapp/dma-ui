@@ -8,8 +8,7 @@
 !*.css
 !*.html
 !*.json
-!*.md
-!*.mdx
+!*.yml
 
 .angular/
 dist/
