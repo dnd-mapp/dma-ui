@@ -1,5 +1,5 @@
 {
-    "name": "dma-ui",
+    "name": "@dnd-mapp/ui",
     "version": "0.0.1",
     "repository": "https://github.com/dnd-mapp/dma-ui",
     "sideEffects": false,
