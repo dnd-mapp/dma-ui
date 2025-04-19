@@ -51,7 +51,7 @@
                         "browserTarget": "dma-ui:build",
                         "compodoc": false,
                         "configDir": "packages/dma-ui/.storybook",
-                        "outputDir": "storybook-static",
+                        "outputDir": "dist/storybook-static",
                         "styles": ["packages/dma-ui/.storybook/styles.scss"]
                     }
                 },
