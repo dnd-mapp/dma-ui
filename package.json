@@ -4,7 +4,7 @@
     "license": "AGPL-3.0",
     "description": "A shared UI components library for the DnD-Mapp platform",
     "repository": {
-        "url": "https://github.com/dnd-mapp/dma-ui.git",
+        "url": "git+https://github.com/dnd-mapp/dma-ui.git",
         "type": "git"
     },
     "publishConfig": {
