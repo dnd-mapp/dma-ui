@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for considering contributing to **@dnd-mapp/ui**! We welcome contributions of all kinds, including bug reports, feature requests, code contributions, and documentation improvements. Please take a moment to review this guide to ensure a smooth contribution process.
+Thank you for considering contributing to **@dnd-mapp/dma-ui**! We welcome contributions of all kinds, including bug reports, feature requests, code contributions, and documentation improvements. Please take a moment to review this guide to ensure a smooth contribution process.
 
 ---
 
@@ -103,4 +103,4 @@ By contributing to this repository, you agree that your contributions will be li
 
 ___
 
-Thank you for contributing to **@dnd-mapp/ui**! Your support and effort are greatly appreciated.
+Thank you for contributing to **@dnd-mapp/dma-ui**! Your support and effort are greatly appreciated.

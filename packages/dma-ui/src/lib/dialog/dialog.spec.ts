@@ -1,6 +1,6 @@
 import { Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { ButtonHarness, DialogHarness, DialogHeaderHarness, createTestEnvironment } from '@dnd-mapp/ui/testing';
+import { ButtonHarness, DialogHarness, DialogHeaderHarness, createTestEnvironment } from '@dnd-mapp/dma-ui/testing';
 import { ButtonComponent } from '../button';
 import { DialogContentComponent } from './content/dialog-content.component';
 import { DialogService } from './dialog.service';

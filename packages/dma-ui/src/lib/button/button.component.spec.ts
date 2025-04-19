@@ -1,5 +1,5 @@
 import { Component, signal, Type } from '@angular/core';
-import { ButtonHarness, createTestEnvironment } from '@dnd-mapp/ui/testing';
+import { ButtonHarness, createTestEnvironment } from '@dnd-mapp/dma-ui/testing';
 import { ButtonComponent } from './button.component';
 import { ButtonType } from './models';
 

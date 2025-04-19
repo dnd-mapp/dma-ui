@@ -1,5 +1,5 @@
 import { ValueProvider } from '@angular/core';
-import { TOOLTIP_DELAYS, TooltipDelays } from '@dnd-mapp/ui/utils';
+import { TOOLTIP_DELAYS, TooltipDelays } from '@dnd-mapp/dma-ui/utils';
 
 export const provideTestingTooltipDelays: () => ValueProvider = () => ({
     provide: TOOLTIP_DELAYS,
