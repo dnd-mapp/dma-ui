@@ -1,7 +1,6 @@
 name: Deploy Storybook
 permissions:
     contents: write
-    pages: write
 on:
     release:
         types:
