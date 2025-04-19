@@ -35,9 +35,7 @@ jobs:
             - name: Bump version
               run: npm version ${{ inputs.version }} -w packages/dma-ui
             - name: Extract version
-              run: |
-                  VERSION=$(jq -r '.version' packages/dma-ui/package.json)
-                  echo "VERSION=$VERSION" >> $GITHUB_ENV
+              uses: ./.github/actions/extract-version
             - name: Create Pull request
               uses: peter-evans/create-pull-request@v7
               with:
