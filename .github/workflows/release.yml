@@ -19,12 +19,20 @@ jobs:
               uses: ./.github/actions/extract-version
             - name: Configure Git
               uses: ./.github/actions/configure-git
+            - name: Generate token
+              id: generate-token
+              uses: ./.github/actions/generate-auth-token
             - name: Create Git tag
               run: git tag -a ${{ env.VERSION }} -m "${{ env.VERSION }}"
+              env:
+                  GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
             - name: Push Git tag
               run: git push origin ${{ env.VERSION }}
+              env:
+                  GITHUB_TOKEN: ${{ steps.generate-token.outputs.token }}
             - name: Publish the release
               uses: softprops/action-gh-release@v2
               with:
                   name: ${{ env.VERSION }}
                   tag_name: ${{ env.VERSION }}
+                  token: ${{ steps.generate-token.outputs.token }}
