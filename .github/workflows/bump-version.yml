@@ -31,7 +31,9 @@ jobs:
                   app-id: ${{ secrets.AUTH_APP_ID }}
                   private-key: ${{ secrets.AUTH_APP_PRIVATE_KEY }}
             - name: Bump version
-              run: npm version ${{ inputs.version }} -w packages/dma-ui
+              run: |
+                  npm version ${{ inputs.version }} --git-tag-version false -w packages/dma-ui
+                  npm version ${{ inputs.version }} --git-tag-version false
             - name: Extract version
               uses: ./.github/actions/extract-version
             - name: Create Pull request
