@@ -1,7 +1,7 @@
 {
     "name": "@dnd-mapp/dma-ui",
     "version": "0.2.2",
-    "license": "AGPL-3.0",
+    "license": "AGPL-3.0-only",
     "description": "A shared UI components library for the DnD-Mapp platform",
     "repository": {
         "url": "git+https://github.com/dnd-mapp/dma-ui.git",
@@ -23,9 +23,6 @@
     },
     "workspaces": [
         "./packages/*"
-    ],
-    "files": [
-        "dist/dma-ui"
     ],
     "dependencies": {
         "@angular/animations": "~19.2.0",
