@@ -19,7 +19,10 @@ jobs:
               run: npm ci
             - name: Compile code
               run: npm run build
+            - name: Prepare package
+              run: npm run prepack
             - name: Publish
+              working-directory: .package
               run: npm publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
